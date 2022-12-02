@@ -45,20 +45,20 @@ export default function Navbar() {
 
   const desktopButtons = () => {
     return (
-      <>
+      <Toolbar sx={{ display: { xs: "none", md: "flex" } }}>
         <NbLgScreenButton variant="navbarButton">Testimonials</NbLgScreenButton>
         <NbLgScreenButton variant="navbarButton">About Us</NbLgScreenButton>
         <NbLgScreenButton variant="navbarButton" color="dark">
           Request A Lesson
         </NbLgScreenButton>
-      </>
+      </Toolbar>
     );
   };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Container>
+        <Container maxWidth="xl">
           <Toolbar
             sx={{
               display: "flex",
