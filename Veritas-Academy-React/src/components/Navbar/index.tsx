@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button, { ButtonProps } from "@mui/material/Button";
-import Logo from "../../assets/VeritasAcademy.png";
+import Logo from "../../assets/images/VeritasAcademy.png";
 import { Container } from "@mui/system";
 import { alpha, styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";

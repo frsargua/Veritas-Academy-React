@@ -4,13 +4,16 @@ import "./App.css";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./themes";
 import Navbar from "./components/Navbar";
+import { LandingPage } from "./components/Pages/LandingPage";
+import { Container } from "@mui/system";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <Navbar />
-      </div>
+      <Navbar />
+      <Container maxWidth="xl">
+        <LandingPage />
+      </Container>
     </ThemeProvider>
   );
 }
