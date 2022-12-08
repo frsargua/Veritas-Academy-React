@@ -56,7 +56,7 @@ export default function Navbar() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, mb: "7rem" }}>
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar

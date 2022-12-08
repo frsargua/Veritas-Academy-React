@@ -11,7 +11,7 @@ export function GridItemsImages() {
         component="img"
         item
         xs={4}
-        sx={{ objectFit: "cover", height: 375 / 2 }}
+        sx={{ objectFit: "cover", height: 350 / 2 }}
         src={`${url}`}
       />
     );

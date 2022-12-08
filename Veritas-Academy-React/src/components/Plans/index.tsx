@@ -4,10 +4,10 @@ import { SinglePlanCard } from "./SinglePlanCard";
 export function Plans() {
   return (
     <>
-      <Typography variant="h3" textAlign="center">
+      <Typography variant="h3" textAlign="center" gutterBottom={true}>
         The services we offer
       </Typography>
-      <Typography variant="h5" textAlign="center">
+      <Typography variant="h5" textAlign="center" sx={{ mb: "3rem" }}>
         We only work with highly experienced tutors. We especialised in Science,
         and Maths.
       </Typography>
@@ -17,6 +17,7 @@ export function Plans() {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: { xs: "column", md: "row" },
+          mb: "6rem",
         }}
       >
         <SinglePlanCard

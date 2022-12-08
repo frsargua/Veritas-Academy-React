@@ -10,6 +10,8 @@ export function Hero() {
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-around",
+          alignItems: "center",
+          mb: "6rem",
         }}
       >
         <HeroBanner />
