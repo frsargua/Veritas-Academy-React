@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  HashRouter,
-  Route,
-  Router,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import { ThemeProvider } from "@mui/material/styles";
@@ -12,7 +6,7 @@ import { theme } from "./themes";
 import Navbar from "./components/Navbar";
 import { LandingPage } from "./components/Pages/LandingPage";
 import { Enquire } from "./components/Pages/Enquire";
-import { Container } from "@mui/system";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,6 +17,7 @@ function App() {
           <Route path="/" element={<LandingPage />}></Route>
           <Route path="/contact" element={<Enquire />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );
