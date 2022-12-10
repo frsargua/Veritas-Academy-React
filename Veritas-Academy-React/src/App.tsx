@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Route,
+  Router,
+  Routes,
+} from "react-router-dom";
 
 import "./App.css";
 import { ThemeProvider } from "@mui/material/styles";
@@ -11,15 +17,13 @@ import { Container } from "@mui/system";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Navbar />
-      <Container maxWidth="xl">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/contact" element={<Enquire />} />
-          </Routes>
-        </BrowserRouter>
-      </Container>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/contact" element={<Enquire />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

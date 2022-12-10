@@ -6,9 +6,10 @@ import Typography from "@mui/material/Typography";
 import Button, { ButtonProps } from "@mui/material/Button";
 import Logo from "../../assets/images/VeritasAcademy.png";
 import { Container } from "@mui/system";
-import { alpha, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   let [menuState, setMenuState] = React.useState(false);
@@ -18,6 +19,10 @@ export default function Navbar() {
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
+  }));
+  const LinkCustom = styled(Link)(() => ({
+    border: "none",
+    textDecoration: "none",
   }));
 
   const NbLgScreenButton = styled(Button)<ButtonProps>(({ theme }) => ({
@@ -31,14 +36,36 @@ export default function Navbar() {
     setMenuState((prev) => !prev);
   }
 
+  const LinksCustomDesktop = (text: string, redirect: string) => {
+    return (
+      <LinkCustom to={`/${redirect}`}>
+        <NbLgScreenButton variant="navbarButton" sx={{ color: "white" }}>
+          {text}
+        </NbLgScreenButton>
+      </LinkCustom>
+    );
+  };
+  const LinksCustomMobile = (text: string, redirect: string) => {
+    return (
+      <LinkCustom to={`/${redirect}`}>
+        <NbSmScreenButton variant="navbarButton" sx={{ color: "white" }}>
+          {text}
+        </NbSmScreenButton>
+      </LinkCustom>
+    );
+  };
+
   const mobileButtons = () => {
     return (
       <>
-        <NbSmScreenButton variant="navbarButton">Testimonials</NbSmScreenButton>
-        <NbSmScreenButton variant="navbarButton">About Us</NbSmScreenButton>
-        <NbSmScreenButton variant="navbarButton" color="dark">
-          Request A Lesson
-        </NbSmScreenButton>
+        {LinksCustomMobile("Testimonials", "testimonials")}
+        {LinksCustomMobile("About Us", "AboutUs")}
+
+        <LinkCustom to={`/Request`}>
+          <NbSmScreenButton variant="navbarButton" sx={{ color: "white" }}>
+            Request
+          </NbSmScreenButton>
+        </LinkCustom>
       </>
     );
   };
@@ -46,18 +73,20 @@ export default function Navbar() {
   const desktopButtons = () => {
     return (
       <Toolbar sx={{ display: { xs: "none", md: "flex" } }}>
-        <NbLgScreenButton variant="navbarButton">Testimonials</NbLgScreenButton>
-        <NbLgScreenButton variant="navbarButton">About Us</NbLgScreenButton>
-        <NbLgScreenButton variant="navbarButton" color="dark">
-          Request A Lesson
-        </NbLgScreenButton>
+        {LinksCustomDesktop("Testimonials", "testimonials")}
+        {LinksCustomDesktop("About Us", "AboutUs")}
+        <LinkCustom to={`/contact`}>
+          <NbLgScreenButton variant="contained" color="inherit">
+            Request
+          </NbLgScreenButton>
+        </LinkCustom>
       </Toolbar>
     );
   };
 
   return (
-    <Box sx={{ flexGrow: 1, mb: "7rem" }}>
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" color="blue500" sx={{ boxShadow: "none" }}>
         <Container maxWidth="xl">
           <Toolbar
             sx={{
@@ -68,11 +97,13 @@ export default function Navbar() {
             }}
           >
             <Toolbar>
-              <Typography
-                component="img"
-                src={`${Logo}`}
-                sx={{ width: "200px" }}
-              />
+              <LinkCustom to={"/"}>
+                <Typography
+                  component="img"
+                  src={`${Logo}`}
+                  sx={{ width: "200px" }}
+                />
+              </LinkCustom>
               <IconButton
                 size="large"
                 edge="start"

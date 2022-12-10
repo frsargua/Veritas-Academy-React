@@ -10,12 +10,13 @@ export function HeroActionCard() {
   return (
     <Card
       sx={{
-        height: { xs: "200px", md: "420px" },
+        height: { xs: "420px", md: "420px" },
         width: { xs: "95%", md: "490px" },
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        mt: { xs: "4rem", md: "0" },
       }}
     >
       <CardContent>
