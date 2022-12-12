@@ -27,18 +27,21 @@ export function Plans() {
             cost="15"
             year="KS3"
             subjects={["English", "Chemistry", "Physics", "Biology"]}
+            color="blue"
           />
           <SinglePlanCard
             discount="15% OFF"
             cost="15"
             year="KS3"
             subjects={["English", "Chemistry", "Physics", "Biology"]}
+            color="red"
           />
           <SinglePlanCard
             discount="15% OFF"
             cost="15"
             year="KS3"
             subjects={["English", "Chemistry", "Physics", "Biology"]}
+            color="green"
           />
         </Box>
       </Container>
