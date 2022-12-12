@@ -85,7 +85,7 @@ export default function Navbar() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 0 }}>
       <AppBar position="static" color="blue500" sx={{ boxShadow: "none" }}>
         <Container maxWidth="xl">
           <Toolbar

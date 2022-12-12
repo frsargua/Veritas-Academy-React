@@ -20,9 +20,10 @@ function Footer() {
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundImage: `url(${spacer2})`,
+        mt: "auto",
       }}
     >
-      <Container>
+      <Container maxWidth="xl">
         <Box sx={{ width: "100%" }}>
           <Box
             sx={{

@@ -1,11 +1,11 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import veritasLogoImage from "../../assets/images/veritas.png";
 import EnquireForm from "../EnquireForm";
 
 export function Enquire() {
   return (
-    <>
-      <Typography variant="h1" textAlign="center">
+    <Box sx={{ my: "5rem" }}>
+      <Typography variant="h1" textAlign="center" fontWeight={"700"}>
         want to learn more?
       </Typography>
 
@@ -15,6 +15,6 @@ export function Enquire() {
           <EnquireForm />
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 }
