@@ -1,20 +1,33 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { Container } from "@mui/system";
 import veritasLogoImage from "../../assets/images/veritas.png";
 import EnquireForm from "../EnquireForm";
 
 export function Enquire() {
   return (
-    <Box sx={{ my: "5rem" }}>
-      <Typography variant="h1" textAlign="center" fontWeight={"700"}>
-        want to learn more?
-      </Typography>
+    <Container maxWidth="xl">
+      <Box sx={{ my: "5rem" }}>
+        <Typography
+          variant="h1"
+          gutterBottom
+          textAlign="center"
+          fontWeight={"500"}
+        >
+          Want to learn more?
+        </Typography>
 
-      <Grid container spacing={2} justifyContent={"center"} alignItems="center">
-        <Grid item xs={6} component="img" src={`${veritasLogoImage}`} />
-        <Grid item xs={6}>
-          <EnquireForm />
+        <Grid
+          container
+          spacing={6}
+          justifyContent={"center"}
+          alignItems="center"
+        >
+          <Grid item xs={6} component="img" src={`${veritasLogoImage}`} />
+          <Grid item xs={6}>
+            <EnquireForm />
+          </Grid>
         </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </Container>
   );
 }

@@ -8,6 +8,7 @@ import { LandingPage } from "./components/Pages/LandingPage";
 import { Enquire } from "./components/Pages/Enquire";
 import Footer from "./components/Footer";
 import { Box } from "@mui/system";
+import AboutUs from "./components/Pages/AboutUs";
 
 function App() {
   return (
@@ -18,13 +19,14 @@ function App() {
             minHeight: "100vh",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-evenly",
+            justifyContent: "space-between",
           }}
         >
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />}></Route>
             <Route path="/contact" element={<Enquire />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
           </Routes>
           <Footer />
         </Box>

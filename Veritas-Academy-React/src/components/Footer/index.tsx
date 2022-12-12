@@ -11,24 +11,22 @@ function Footer() {
   return (
     <Box
       sx={{
-        aspectRatio: 900 / 90,
-        height: "150px",
+        height: "120px",
         width: "100%",
         display: "flex",
         alignItems: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundImage: `url(${spacer2})`,
-        mt: "auto",
+        backgroundColor: "#E9EBF0",
+        // backgroundRepeat: "no-repeat",
+        // backgroundPosition: "center",
+        // backgroundSize: "cover",
+        // backgroundImage: `url(${spacer2})`,
       }}
     >
       <Container maxWidth="xl">
         <Box sx={{ width: "100%" }}>
           <Box
             sx={{
-              aspectRatio: 900 / 90,
-              height: "150px",
+              height: "80px",
               width: "100%",
               display: "flex",
               alignItems: "center",
@@ -43,9 +41,8 @@ function Footer() {
               alignItems="center"
               sx={{
                 borderRadius: "15px",
-                width: "100px",
-                height: "100px",
-                backgroundColor: "blue",
+                width: "90px",
+                height: "90px",
               }}
             >
               <Grid item xs={6} display="flex" justifyContent="center">
@@ -62,7 +59,9 @@ function Footer() {
               </Grid>
             </Grid>
             <Box sx={{ marginLeft: "auto" }}>
-              <ul style={{ display: "flex", listStyle: "none" }}>
+              <ul
+                style={{ display: "flex", listStyle: "none", color: "black" }}
+              >
                 <li style={{ marginLeft: "1rem" }}>About us</li>
                 <li style={{ marginLeft: "1rem" }}>Contact Us</li>
               </ul>
